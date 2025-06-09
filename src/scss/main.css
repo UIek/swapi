@@ -1,0 +1,273 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition: none;
+  }
+}
+body,
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+.header {
+  background-color: black;
+  color: #ffe81f;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .sw {
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav {
+  position: relative;
+}
+.nav .burger {
+  font-size: 2em;
+  cursor: pointer;
+  display: none;
+  color: #ffe81f;
+}
+@media (max-width: 768px) {
+  .nav .burger {
+    display: block;
+  }
+}
+.nav .navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  .nav .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 3.5rem;
+    right: 0;
+    background-color: #111;
+    padding: 1rem;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+}
+.nav .navbar-links.active {
+  display: flex;
+}
+.nav .navbar-links .link {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+.nav .navbar-links .link:hover {
+  color: #ffe81f;
+}
+
+.person p,
+.person ul,
+.planet p,
+.planet ul,
+.specie p,
+.specie ul,
+.starship p,
+.starship ul,
+.vehicle p,
+.vehicle ul,
+.film p,
+.film ul {
+  display: none;
+}
+.person .activ,
+.planet .activ,
+.specie .activ,
+.starship .activ,
+.vehicle .activ,
+.film .activ {
+  display: block;
+}
+
+.page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: black;
+}
+
+.person,
+.planet,
+.specie,
+.starship,
+.vehicle,
+.film {
+  background-color: rgb(59, 59, 59);
+  color: rgb(113, 113, 0);
+  height: auto;
+  width: 30vw;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.person .buttons,
+.planet .buttons,
+.specie .buttons,
+.starship .buttons,
+.vehicle .buttons,
+.film .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px;
+}
+.person .buttons .button,
+.planet .buttons .button,
+.specie .buttons .button,
+.starship .buttons .button,
+.vehicle .buttons .button,
+.film .buttons .button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.person .buttons .button button,
+.planet .buttons .button button,
+.specie .buttons .button button,
+.starship .buttons .button button,
+.vehicle .buttons .button button,
+.film .buttons .button button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid rgb(168, 168, 0);
+  color: rgb(168, 168, 0);
+  border-radius: 5px;
+  padding: 3px;
+  width: 90%;
+  margin: 5px;
+}
+.person .buttons .button button:hover,
+.planet .buttons .button button:hover,
+.specie .buttons .button button:hover,
+.starship .buttons .button button:hover,
+.vehicle .buttons .button button:hover,
+.film .buttons .button button:hover {
+  background-color: rgb(168, 168, 0);
+  color: rgb(59, 59, 59);
+}
+.person h1,
+.planet h1,
+.specie h1,
+.starship h1,
+.vehicle h1,
+.film h1 {
+  color: rgb(168, 168, 0);
+  font-size: 2em;
+  text-shadow: 1px 1px 5px black;
+  margin-top: 1rem;
+}
+.person button,
+.planet button,
+.specie button,
+.starship button,
+.vehicle button,
+.film button {
+  margin: 5px;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.home .links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: rgb(59, 59, 59);
+  padding: 2rem;
+  border-radius: 10px;
+}
+.home .link {
+  text-decoration: none;
+  color: rgb(168, 168, 0);
+  border: 1px solid rgb(168, 168, 0);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 1px 1px 5px black;
+}
+.home .link:hover {
+  background-color: rgb(168, 168, 0);
+  color: rgb(59, 59, 59);
+}/*# sourceMappingURL=main.css.map */

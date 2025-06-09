@@ -1,0 +1,15 @@
+.person,
+.planet,
+.specie,
+.starship,
+.vehicle,
+.film{
+    p,
+    ul {
+      display: none;
+    }
+  
+    .activ {
+      display: block;
+    }
+}
